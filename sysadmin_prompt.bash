@@ -358,7 +358,7 @@ function sypro_prompt_command {
     # parents.
     function __sypro_detect_ssh {
         local pid="$1"
-        if [ -z "$pid" ] || [ "$pid" = 1 ]; then
+        if [ -z "$pid" ] || [ "$pid" = 1 ] || [ "$pid" = 0 ]; then
             return 1
         fi
 
